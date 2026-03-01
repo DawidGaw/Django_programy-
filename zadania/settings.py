@@ -123,3 +123,4 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 LOGIN_REDIRECT_URL = '/dashboard/'
 TIME_ZONE = 'Europe/Warsaw'
 USE_TZ = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

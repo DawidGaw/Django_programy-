@@ -1,0 +1,18 @@
+<h1>Customer generator</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Generate customer</button>
+</form>
+
+<h2>Customers:</h2>
+
+<ul>
+{% for customer in customers %}
+    <li>
+        {{ customer.name }} |
+        Basket ID: {{ customer.basket.id }} |
+        Registered: {{ customer.registration_date }}
+    </li>
+{% endfor %}
+</ul>
